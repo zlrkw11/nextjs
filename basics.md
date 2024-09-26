@@ -10,3 +10,9 @@ useState, onClick, onChange...
 
 server component:
 fetch data, sensitive info
+
+by default, every component is server side components.
+```
+"use client";
+```
+on the top 
