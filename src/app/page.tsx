@@ -1,3 +1,4 @@
+import { useState } from "react";
 export default function Home() {
   return (
     <div>
@@ -5,7 +6,8 @@ export default function Home() {
         <h1>Enter your name</h1>
       </div>
       <form>
-        <input type="text" placeholder="type your name" />
+        <input type="text" placeholder="type your name..." />
+        <button type="submit"> Predict Data </button>
       </form>
     </div>
   );
