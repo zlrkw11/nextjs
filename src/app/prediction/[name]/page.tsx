@@ -27,6 +27,8 @@ export default async function Page({ params }: Params) {
     genderData,
     countryData,
   ]);
+
+  const countryId = country?.[0]?.country_id || "Unknown";
   return (
     <div>
       <div>Personal Info</div>
@@ -34,7 +36,7 @@ export default async function Page({ params }: Params) {
       <div>Gender</div>
       <div>{gender?.gender}</div>
       <div>Country</div>
-      <div>{country?.[0]?.country_id}</div>
+      <div>{countryId}</div>
     </div>
   );
 }
