@@ -1,6 +1,6 @@
 "use client";
 import { useState, FormEvent } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 export default function Home() {
   const [inputVal, setInputVal] = useState("");
   const { push } = useRouter();

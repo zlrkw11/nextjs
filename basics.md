@@ -18,3 +18,15 @@ by default, every component is server side components.
 on the top 
 
 ## dynamic route
+import the useRouter, destructure the useRouter -> push function.
+allows us to redirect to another page depending whatever input value we have submitted. (under /prediction/ folder)
+```
+import { useRouter } from "next/navigation";
+
+const { push } = useRouter();
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    push(`/prediction/${inputVal}`);
+  };
+```
+
