@@ -30,3 +30,9 @@ const { push } = useRouter();
   };
 ```
 
+## API usage
+
+1. fetch the data from api (async)
+2. pass the data into Promise
+3. destructure and make a list of data
+   
