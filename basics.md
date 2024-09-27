@@ -16,3 +16,5 @@ by default, every component is server side components.
 "use client";
 ```
 on the top 
+
+## dynamic route
