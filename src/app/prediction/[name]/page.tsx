@@ -1,15 +1,15 @@
 const getPredictedAge = async (name: string) => {
-  const res = await fetch(`api.agify.io/?name=${name}`);
+  const res = await fetch(`https://api.agify.io/?name=${name}`);
   return res.json();
 };
 
 const getPredictedGender = async (name: string) => {
-  const res = await fetch(`api.genderize.io/?name=${name}`);
+  const res = await fetch(`https://api.genderize.io/?name=${name}`);
   return res.json();
 };
 
 const getPredictedCountry = async (name: string) => {
-  const res = await fetch(`api.nationalize.io/?name=${name}`);
+  const res = await fetch(`https://api.nationalize.io/?name=${name}`);
   return res.json();
 };
 
@@ -27,5 +27,14 @@ export default async function Page({ params }: Params) {
     genderData,
     countryData,
   ]);
-  return <div>{params.name}</div>;
+  return (
+    <div>
+      <div>Personal Info</div>
+      <div>{age?.age}</div>
+      <div>Gender</div>
+      <div>{gender?.gender}</div>
+      <div>Country</div>
+      <div>{country?.[0]?.country_id}</div>
+    </div>
+  );
 }
